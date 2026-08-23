@@ -10,12 +10,18 @@ const projectSchema = new mongoose.Schema(
 
     description: {
       type: String,
-      required: true
+      required: true,
+      trim: true
     },
 
     technologies: {
       type: [String],
-      required: true
+      default: []
+    },
+
+    image: {
+      type: String,
+      default: ""
     },
 
     github: {
@@ -24,11 +30,6 @@ const projectSchema = new mongoose.Schema(
     },
 
     liveDemo: {
-      type: String,
-      default: ""
-    },
-
-    image: {
       type: String,
       default: ""
     }
